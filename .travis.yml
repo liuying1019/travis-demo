@@ -1,7 +1,7 @@
 jobs:
   include:
     - stage: Tests
-      script: echo "`data` Unit Testsl" && sleep 5
+      script: echo "`data` Unit Testsl" && sleep 5;exit 1
       name: "Unit Tests"
     - script: echo "`data` Integration-test"
       name: "Integration Tests"
