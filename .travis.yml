@@ -1,2 +1,11 @@
-script:
-       - echo "hello world"
+jobs:
+  include:
+    - stage: Tests
+      script: echo "`data` Unit Testsl" && sleep 5
+      name: "Unit Tests"
+    - script: echo "`data` Integration-test"
+      name: "Integration Tests"
+    - stage: deploy
+      name: "Deploy to GCP"
+      script: echo "`data` Deploy to GCP"
+
